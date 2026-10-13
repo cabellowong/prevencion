@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación de Laboratorio - SST</title>
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --accent-color: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Menú de navegación */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #60a5fa;
+        }
+
+        /* Contenedor principal */
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Sección de Lema de SST */
+        .lema-section {
+            background: linear-gradient(135deg, #1e3a8a, var(--accent-color));
+            color: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .lema-section h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .lema-section p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Contenido multimedia (Foto y Video) */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* Contenedor de la foto */
+        .photo-container {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e2e8f0;
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Contenedor del video */
+        .video-container {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 220px;
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: #64748b;
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+    <header>
+        <div class="logo">SST - Prevención de Riesgos</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#lema">Lema</a></li>
+                <li><a href="#multimedia">Multimedia</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Lema de Seguridad y Salud en el Trabajo -->
+        <section class="lema-section" id="lema">
+            <h1>"La seguridad no es un pasatiempo, es una forma de vida"</h1>
+            <p>Prevención y Control de Riesgos Laborales y Ambientales</p>
+        </section>
+
+        <!-- Sección de Foto y Video -->
+        <div class="content-grid" id="multimedia">
+            <!-- Tarjeta de Foto -->
+            <div class="card">
+                <h3>Fotografía del Estudiante</h3>
+                <div class="photo-container">
+                    <!-- Reemplaza 'tu-foto.jpg' por el nombre o ruta de tu archivo de imagen real -->
+                    <img src="tu-foto.jpg" alt="Foto de Usted" onerror="this.src='https://via.placeholder.com/200?text=Sube+tu+Foto'">
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #64748b;">CABELLO WONG DAVID MOISES</p>
+            </div>
+
+            <!-- Tarjeta de Video -->
+            <div class="card">
+                <h3>Video de Presentación / SST</h3>
+                <div class="video-container">
+                    <!-- Reemplaza 'video-sst.mp4' por tu archivo de video local o un enlace directo -->
+                    <video controls muted>
+                        <source src="video-sst.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de video.
+                    </video>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #64748b;">Reproducción automática / Controles activados</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Examen Parcial I - Prevención y Control de Riesgos Laborales y Ambientales</p>
+    </footer>
+
+</body>
+</html>
